@@ -51,15 +51,15 @@ cp ~/node_modules/meshcentral/sample-config-advanced.json ~/meshcentral-data/con
 
 # Set WANonly, MPS port, MongoDB and other options in config.json
 sed -i -e 's/"_MongoDb":/"MongoDb":/g' ~/meshcentral-data/config.json
-sed -i -e "s/\"_cert\": \"myserver.mydomain.com\",/$my_cert/g" ~/Downloads/config.json
-sed -i -e "s/\"_sessionKey\": \"MyReallySecretPassword1\",/$my_sessionKey/g" ~/Downloads/config.json
-sed -i -e "s/\"_letsencrypt\": {/$my_letencrypt/g" ~/Downloads/config.json
-sed -i -e "s/myemail@mydomain.com/$my_email/g" ~/Downloads/config.json
-sed -i -e "s/myserver.mydomain.com/$my_names/g" ~/Downloads/config.json
-sed -i -e "s/\"production\": false/$my_production/g" ~/Downloads/config.json
-sed -i -e "s/\"_dbEncryptKey\": \"MyReallySecretPassword2\",/$my_dbEncryptKey/g" ~/Downloads/config.json
-sed -i -e "s/\"dbRecordsEncryptKey\": \"MyReallySecretPassword\",/$my_dbRecordsEncryptKey/g" ~/Downloads/config.json
-sed -i -e "s/\"_dbRecordsDecryptKey\": \"MyReallySecretPassword\",/$my_dbRecordsDecryptKey/g" ~/Downloads/config.json
+sed -i -e "s/\"_cert\": \"myserver.mydomain.com\",/$my_cert/g" ~/meshcentral-data/config.json
+sed -i -e "s/\"_sessionKey\": \"MyReallySecretPassword1\",/$my_sessionKey/g" ~/meshcentral-data/config.json
+sed -i -e "s/\"_letsencrypt\": {/$my_letencrypt/g" ~/meshcentral-data/config.json
+sed -i -e "s/myemail@mydomain.com/$my_email/g" ~/meshcentral-data/config.json
+sed -i -e "s/myserver.mydomain.com/$my_names/g" ~/meshcentral-data/config.json
+sed -i -e "s/\"production\": false/$my_production/g" ~/meshcentral-data/config.json
+sed -i -e "s/\"_dbEncryptKey\": \"MyReallySecretPassword2\",/$my_dbEncryptKey/g" ~/meshcentral-data/config.json
+sed -i -e "s/\"dbRecordsEncryptKey\": \"MyReallySecretPassword\",/$my_dbRecordsEncryptKey/g" ~/meshcentral-data/config.json
+sed -i -e "s/\"_dbRecordsDecryptKey\": \"MyReallySecretPassword\",/$my_dbRecordsDecryptKey/g" ~/meshcentral-data/config.json
 
 # Generate short server commands
 echo "sudo systemctl start meshcentral.service" > start
